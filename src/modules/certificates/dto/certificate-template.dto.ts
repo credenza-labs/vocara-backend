@@ -20,7 +20,7 @@ import { VALID_ORIENTATIONS } from '../certificate-template.types';
 const HEX_COLOR = /^#([0-9A-Fa-f]{6})$/;
 
 export class CertificateBrandingDto {
-  @ApiPropertyOptional({ example: 'Hamplard Academy', description: 'Organization name printed on the certificate' })
+  @ApiPropertyOptional({ example: 'Vocara Academy', description: 'Organization name printed on the certificate' })
   @IsOptional()
   @IsString()
   @IsNotEmpty()
@@ -39,7 +39,7 @@ export class CertificateBrandingDto {
   @Matches(HEX_COLOR, { message: 'secondaryColor must be a hex color in the form #RRGGBB' })
   secondaryColor?: string;
 
-  @ApiPropertyOptional({ example: 'https://cdn.hamplard.com/brand/logo.png' })
+  @ApiPropertyOptional({ example: 'https://cdn.vocara.com/brand/logo.png' })
   @IsOptional()
   @IsUrl()
   logoUrl?: string;
@@ -55,7 +55,7 @@ export class CertificateBrandingDto {
   @MaxLength(80)
   fontFamily?: string;
 
-  @ApiPropertyOptional({ example: 'Verify this credential at hamplard.com/certificates' })
+  @ApiPropertyOptional({ example: 'Verify this credential at vocara.com/certificates' })
   @IsOptional()
   @IsString()
   @MaxLength(240)

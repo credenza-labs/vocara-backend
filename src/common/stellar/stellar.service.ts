@@ -40,12 +40,12 @@ export class StellarService implements OnModuleInit {
     const networkName = this.config.get<string>('STELLAR_NETWORK', 'testnet');
 
     this.rpcClient = new SorobanRpc.Server(rpcUrl, { allowHttp: true });
-    this.contractId = this.config.get<string>('HAMPLARD_CONTRACT_ID');
+    this.contractId = this.config.get<string>('VOCARA_CONTRACT_ID');
     this.networkPassphrase =
       networkName === 'mainnet' ? Networks.PUBLIC : Networks.TESTNET;
 
     this.logger.log(`Stellar connected to ${networkName} (${rpcUrl})`);
-    this.logger.log(`Hamplard contract: ${this.contractId}`);
+    this.logger.log(`Vocara contract: ${this.contractId}`);
   }
 
   // ----------------------------------------------------------
@@ -66,7 +66,7 @@ export class StellarService implements OnModuleInit {
   // ----------------------------------------------------------
 
   /**
-   * Fetch Hamplard contract events from a given ledger.
+   * Fetch Vocara contract events from a given ledger.
    * Called every 5 seconds by EventsService.
    */
   async fetchContractEvents(

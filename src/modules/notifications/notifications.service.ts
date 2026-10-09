@@ -276,9 +276,9 @@ export class NotificationsService {
 
       try {
         await this.transporter.sendMail({
-          from: this.config.get('EMAIL_FROM', 'noreply@hamplard.com'),
+          from: this.config.get('EMAIL_FROM', 'noreply@vocara.com'),
           to: recipient,
-          subject: 'Your daily Hamplard digest',
+          subject: 'Your daily Vocara digest',
           text: `You have ${unreadNotifications.length} unread updates.`,
           html,
         });
@@ -300,10 +300,10 @@ export class NotificationsService {
     courseTitle: string,
     pdfBuffer: Buffer,
   ): Promise<boolean> {
-    const platformName = this.config.get('PLATFORM_NAME', 'Hamplard');
+    const platformName = this.config.get('PLATFORM_NAME', 'Vocara');
     try {
       await this.transporter.sendMail({
-        from: this.config.get('EMAIL_FROM', 'noreply@hamplard.com'),
+        from: this.config.get('EMAIL_FROM', 'noreply@vocara.com'),
         to,
         subject: `🧾 ${platformName} — Invoice #${invoiceNumber}`,
         text: `Thank you for your purchase of "${courseTitle}". Your invoice #${invoiceNumber} is attached.`,
@@ -461,7 +461,7 @@ export class NotificationsService {
     text: string,
     type: NotificationType,
   ) {
-    const platformName = this.config.get('PLATFORM_NAME', 'Hamplard');
+    const platformName = this.config.get('PLATFORM_NAME', 'Vocara');
     const emoji: Partial<Record<NotificationType, string>> = {
       COURSE_APPROVED: '✅',
       COURSE_REJECTED: '📝',
@@ -483,7 +483,7 @@ export class NotificationsService {
     };
 
     await this.transporter.sendMail({
-        from: this.config.get('EMAIL_FROM', 'noreply@hamplard.com'),
+        from: this.config.get('EMAIL_FROM', 'noreply@vocara.com'),
         to,
         subject: `${emoji[type] ?? '📬'} ${platformName} — ${subject}`,
         text,

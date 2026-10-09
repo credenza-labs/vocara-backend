@@ -29,7 +29,7 @@ describe('QueueService', () => {
         notificationId: 'notification-1',
         to: 'student@example.com',
         subject: 'Welcome',
-        text: 'Welcome to Hamplard',
+        text: 'Welcome to Vocara',
         type: NotificationType.COURSE_APPROVED,
       }),
     ).resolves.toEqual({ id: 'job-1', status: 'waiting' });

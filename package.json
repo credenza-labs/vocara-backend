@@ -1,8 +1,8 @@
 {
-  "name": "hamplard-backend",
+  "name": "vocara-backend",
   "version": "0.1.0",
-  "description": "Hamplard — NestJS backend for the online vocational skills learning platform",
-  "author": "Hamplard Team",
+  "description": "Vocara — NestJS backend for the online vocational skills learning platform",
+  "author": "Vocara Team",
   "private": true,
   "license": "MIT",
   "scripts": {

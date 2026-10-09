@@ -292,7 +292,7 @@ export class DataExportService {
 
     return {
       jobId: job.id,
-      filename: `hamplard-data-export-${job.id}.json`,
+      filename: `vocara-data-export-${job.id}.json`,
       contentType: 'application/json',
       payload: job.payload,
       checksum: job.checksum,
@@ -339,7 +339,7 @@ export class DataExportService {
 
       const exportedAt = new Date().toISOString();
       const payload = {
-        format: 'hamplard-gdpr-data-export',
+        format: 'vocara-gdpr-data-export',
         version: 1,
         exportedAt,
         data: {

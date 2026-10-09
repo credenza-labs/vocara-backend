@@ -43,7 +43,7 @@ export class CreatePathDto {
    */
   @ApiPropertyOptional({
     description: 'Cover image shown on the path card',
-    example: 'https://cdn.hamplard.com/paths/fashion.jpg',
+    example: 'https://cdn.vocara.com/paths/fashion.jpg',
   })
   @IsOptional()
   @IsUrl()
